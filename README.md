@@ -1,4 +1,4 @@
-# A Random Forest classification (supervised machine learning) aims to predict the gender of smartphone users. 
+# A Random Forest classification (supervised machine learning) that aims to predict the gender of smartphone users. 
 * Written by: [Ivy Wu S.Y.](https://www.linkedin.com/in/ivy-wusumyi)
 * Technologies: R, tidymodels, random forest, classification, ggplot2
 
@@ -8,7 +8,7 @@ Classification is a supervised machine learning method aims to identify the cate
 
 
 ## 2. About the Data
-The data contains demograpgics and personality data from a variety of Apple and Android users (n=529). These data contain the following variables:
+The data contains demographics and personality data from a variety of Apple and Android users (n=529). These data contain the following variables:
 | Variable       |                |
 | -------------- | -------------- |
 | Smartphone(OS) | iPhone/ Android|
