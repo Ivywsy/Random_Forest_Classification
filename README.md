@@ -35,14 +35,14 @@ After finalizing the model choice, it is used to predict the out-of-sample data 
 <img src="/images/confusion_matrix.png?raw=true" width="550"><br/>
 
 ROC and AUC is another useful evaluation matrix as it does not depend on the class distribution. By plotting the true-positive rate against the false-positive rate with a baseline obtained with a random classifier, the plot reveals an AUC value of 0.75 which suggests the model has a moderate capability of distinguishing between classes. <br/>
-<img src="/images/ROC.png?raw=true" width="550"><br/>
+<img src="/images/ROC.png?raw=true" width="350"><br/>
 
 
 ## 6. Model Improvement: Backward Feature Selection
-There are multiple ways to finetune the model for model improvements. A typical method is to perform feature selection by selecting the most important variables and eliminating those redundant features that might increase the risk of overfit to noise in the data. A variable importance score is obtained from the tree decision, showing that “Smartphone” does not contribute much to determining the target outcome. As such, a second random forest model is built with the removal of “Smartphone” variable. <br/> 
+There are multiple ways to finetune the model for model improvements. A typical method is to perform feature selection by selecting the most important variables and eliminating those redundant features that might increase the risk of overfit to noise in the data. A variable importance score is obtained from the tree decision, showing that “Smartphone” does not contribute much in determining the target outcome. As such, a second random forest model is built with the removal of “Smartphone” variable. <br/> 
 <img src="/images/variable_importance.png?raw=true" width="550"><br/> 
 With the same modeling procedure, the performance of the second model, however, does not improve as expected. The overall accuracy and kappa statistic was reduced to 69.8% and 0.25 respectively, indicating the new model with subset features was inferior to the prior model. The reason was probably due to the ensemble nature of random forest with random feature extraction during the splitting of nodes. The randomization leads to a similar feature selection process and hence causing less effect on model improvement. Other tunning options such as grid search optimization should be considered in this case. <br/> 
-<img src="/images/secondRF_result.png?raw=true" width="550"><br/> <br/> 
+<img src="/images/secondRF_result.png?raw=true" width="350"><br/> <br/> 
 
 ## 6. Limitations of Random Forest Classification:
 1.	The algorithm can be computationally intensive as it generates hundreds of trees.
